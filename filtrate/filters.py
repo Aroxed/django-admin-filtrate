@@ -207,7 +207,7 @@ class TreeFilter(FiltrateFilter):
             for node in tree:
                 if type(node) == type(tuple()):
                     # Is a parent node.
-                    title = force_text(node[0])
+                    title = force_str(node[0])
                     new_tree = []
                     cur_tree.append({
                         'data': title,
@@ -216,13 +216,13 @@ class TreeFilter(FiltrateFilter):
                     parse_tree(node[1], new_tree)
                 else:
                     # Is a leaf node.
-                    title = force_text(node)
+                    title = force_str(node)
                     cur_tree.append({
                         "attr": {
                             "obj_id": node.pk,
                             "is_selected": node.pk in self.selected_nodes,
                         },
-                        'data': force_text(node),
+                        'data': force_str(node),
                     })
 
         json_tree = []
