@@ -66,7 +66,7 @@ class FiltrateFilter(SimpleListFilter):
         Wrap title and content as the first choice.
         """
         return [{
-            'title': self.get_title(self.request),
+            'title': self.get_title(),
             'content': self.get_content(self.request),
         }]
 
