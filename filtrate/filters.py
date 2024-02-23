@@ -1,6 +1,6 @@
 import json
 
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
 from django.contrib.admin.filters import SimpleListFilter
 from django.utils.safestring import mark_safe
 from django.utils.datastructures import MultiValueDictKeyError
