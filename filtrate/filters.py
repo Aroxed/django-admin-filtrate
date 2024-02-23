@@ -196,7 +196,6 @@ class TreeFilter(FiltrateFilter):
 
     class Media:
         js = (
-            'filtrate/js/jstree/jquery.jstree.js',
             'filtrate/js/filtertree.js',
         )
 
